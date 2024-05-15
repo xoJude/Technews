@@ -1,0 +1,499 @@
+body {
+  margin: 0;
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+}
+
+/* Dark Mode:*/
+
+:root {
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(0, 0, 0);
+}
+body.dark-theme {
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(255, 255, 255);
+}
+
+/* Header :*/
+
+header {
+  background-color: var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.top-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#logo {
+  width: 250px;
+  height: 90px;
+  left: 0;
+  padding-top: 10px;
+  cursor: pointer;
+}
+/**/
+
+.toggle-btn {
+  color: var(--secondary-color);
+  display: none;
+}
+
+.barre-recherche{
+  display: none;
+}
+/**/
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/**/
+.accueil{
+  display: none;
+}
+/**/
+.onglets {
+  font-family: Arial;
+  text-decoration: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  cursor: pointer;
+}
+.onglets > li {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+#icon {
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  cursor: pointer;
+}
+.social-media > li {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* CSS Animation : Header */
+
+.style {
+  position: relative;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary-color);
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.style:after {
+  content: "";
+  position: absolute;
+  background-color: blueviolet;
+  height: 3px;
+  width: 0;
+  left: 0; 
+  transition: 0.3s;
+}
+.style:hover {
+  color: #a0a0a0;
+}
+.style:hover:after {
+  width: 100%;
+}
+
+/* Tableau :*/
+
+table {
+  border-collapse: collapse;
+  z-index: 1;
+}
+th, td {
+  font-size: 24px;
+  color: white;
+  font-family:'Digital-7';
+}
+@font-face{
+  font-family:'Digital-7';
+  src: url("digital-7.regular.ttf");
+}
+
+.band{
+  background-color: blueviolet;
+  width:100vw;
+  height: 25px;
+}
+.scrolling-text-container {
+  height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  animation: scroll 15s linear infinite; 
+}
+.scrolling-text {
+  display: inline-block;
+  padding-right: 25px;
+}
+
+@keyframes scroll {
+  from {
+      transform: translateX(-100vw);
+  }
+  to {
+      transform: translateX(100vw);
+  }
+}
+
+/* https://www.1001fonts.com/digital+clock-fonts.html */
+
+/* Balises :*/
+p, a{
+  text-decoration: inherit;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+  color: var(--secondary-color);
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: blueviolet;
+  color: var(--secondary-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+strong {
+  font-weight: unset;
+}
+
+/* Page Accueil :*/
+
+#page {
+  text-decoration: var(--secondary-color);
+}
+
+.part-un {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+.part-deux {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Partie 1*/
+
+/* Article 1 */
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-image: url(./Images/jpt-hero-desktop_.jpg); 
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  width: 592px;
+  height: 590px;
+  transition: 0.1s;
+}
+.part-right{
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.titre {
+  margin: 0;
+  padding-top: 300px;
+  position: static;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: white;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+}
+.titre-sous-texte {
+  margin: 0;
+  font-size: 1rem;
+  position: static;
+  font-size: 1rem;
+  color: white;
+  opacity: 15px;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Article 2 et 3*/
+
+.block-un {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-image: url(./Images/emma-matelas-carton_\(1\).png);
+  width: 592px;
+  height: 285px;
+  border-radius: 15px;
+  transition: 0.1s;
+
+}
+.block-deux {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-image: url(./Images/wework.jpg);
+  width: 592px;
+  height: 285px;
+  border-radius: 15px;
+  transition: 0.1s;
+}
+.second-titre {
+  font-size: medium;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: static;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+}
+#separation {
+  display: flex;
+  padding-left: 5%;
+  justify-content: flex-start;
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary-color);
+  font-size: 40px;
+  border-bottom: 10px solid blueviolet;
+}
+
+/* Partie 2*/
+
+.information {
+  padding-left: 5%;
+}
+a > .information {
+  display: flex;
+  margin: 20px;
+}
+.image-annonce {
+  position: static;
+  width: 345px;
+  height: 225px;
+  border-radius: 15px;
+}
+.block-texte {
+  margin-left: 25px;
+}
+a > .information > .block-texte > .texte {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+  font-family: "Poppins", sans-serif;
+}
+a > .information > .block-texte > .sous-texte {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: var(--secondary-color);
+  font-family: "Poppins", sans-serif;
+}
+
+/* CSS Animation : actu partie 2 */
+
+a:hover > .information {
+  .image-annonce {
+    filter: blur(2px);
+  }
+  .texte,
+  .sous-texte {
+    color: #a0a0a0;
+  }
+}
+
+a:hover {
+  .block,
+  .block-un,
+  .block-deux {
+    transform: scale(1.01);
+  }
+}
+
+/* Footer :*/
+
+footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+  background-color: grey;
+  bottom: 0;
+}
+#logo-header, #logo-footer {
+  width: 250px;
+  height: 100px;
+  left: 0;
+  cursor: pointer;
+}
+.liens {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-decoration: var(--secondary-color);
+  display: flex;
+  list-style-type: none;
+}
+.liens > li {
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  padding-right: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--secondary-color);
+}
+
+/*Responsive :*/
+
+@media screen and (max-width: 1450px) {
+  .liens{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .part-un{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .part-right, .part-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1190px) {
+  /**/
+  .barre-recherche{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  input {
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 12.5px;
+    padding: 5px;
+    flex: 1;
+  }
+  button {
+    all: unset;
+    width: 24px;
+    height: 27px;
+  }
+  .loupe{
+    color: var(--secondary-color);
+  }
+  /**/
+  /**/
+  .accueil{
+    display: block;
+  }
+  /**/
+
+  .toggle-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+
+  nav {
+    position: absolute;
+    background-color: blueviolet;
+    transform: translateX(-1000px);
+    margin-top: 20vh;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .onglets{
+    padding-left: 0;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .onglets > li {
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-around;
+    height:300px;
+  }
+  .onglets > li > a > p{
+    color: white;
+  }
+  .style:after {
+    background-color: white;
+  }
+  .social-media{
+    position: absolute;
+    bottom: 0;
+    padding-left: 0;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .toggle-btn .crossBurger {
+    display: none;
+  }
+
+  .active nav {
+    transform: translateX(0);
+    transition: 1s;
+  }
+
+  .active .burger {
+    display: none;
+  }
+  .active .crossBurger {
+    display: block;
+  }
+}
